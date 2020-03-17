@@ -7,18 +7,18 @@ Set-Variable -Name SQL_STATEMENT -Value "C:\Users\me\Source\Repos\BabbleFishV4\B
 
 # set the file name to year-quarter audit_num.ps1, get the last audit_num from attachment_template_import
 [string[]]$Filename = sqlcmd -d babblefish --% -S daffy-duck -E -h -1 -k1 -i "C:\Users\me\Source\Repos\BabbleFishV4\BabbleFishV3\sql_querys\CreateCopyScriptFileName.sql"
-$ExecutableFileName = $filename[1].Replace(' ','')
-$LOG_FILENAME = -join([string]$ExecutableFileName, '.log')
-$ZipFileName = -join([string]$ExecutableFileName, '.zip')
-$ExecutableFileName = -join([string]$ExecutableFileName, '.ps1')
-$ExecutableFileName = -join([string]$EXPORT_PATH, [string]$ExecutableFileName)
+$ExecutableFileName = $filename[1].Replace(' ', '')
+$LOG_FILENAME = -join ([string]$ExecutableFileName, '.log')
+$ZipFileName = -join ([string]$ExecutableFileName, '.zip')
+$ExecutableFileName = -join ([string]$ExecutableFileName, '.ps1')
+$ExecutableFileName = -join ([string]$EXPORT_PATH, [string]$ExecutableFileName)
 $compressionLevel = '$compressionLevel'
 $Myfalse = '$false'
-cd $EXPORT_PATH
+Set-Location $EXPORT_PATH
 
 
-if (Test-Path $ExecutableFileName) {Remove-Item $ExecutableFileName}
-if (Test-Path $ZipFileName) {Remove-Item $ZipFileName}
+if (Test-Path $ExecutableFileName) { Remove-Item $ExecutableFileName }
+if (Test-Path $ZipFileName) { Remove-Item $ZipFileName }
 "Add-Type -AssemblyName System.IO.Compression.FileSystem" >> $ExecutableFileName
 "$compressionLevel = [System.IO.Compression.CompressionLevel]::Optimal" >> $ExecutableFileName
 
@@ -31,8 +31,8 @@ if (Test-Path $ZipFileName) {Remove-Item $ZipFileName}
 [string[]]$SourceFileNames = sqlcmd -d babblefish --% -S daffY-duck -E  -Q "select SourceFileName,',', TargetFileName from attachment_was_is"
 
 $options = [System.StringSplitOptions]::RemoveEmptyEntries
-foreach($c in $SourceFileNames) {
-    $i = $c.Replace('\r',' ').Replace('\n','')
+foreach ($c in $SourceFileNames) {
+    $i = $c.Replace('\r', ' ').Replace('\n', '')
     #$x = $i.Split(',',2,$options)
     $from = $i -split ','
     #$from[0]
@@ -41,7 +41,7 @@ foreach($c in $SourceFileNames) {
     #$in = $in.Replace('doc ','doc')
     #$to = $from[1].Replace(' ','')
     if ($from[0].Contains('\')) { 
-        $cmd = -join("xcopy /s/y `"E:\SalesLogixLan\SlxLanDocuments\Mail Merge",$in) + -join("`" `"E:\NETSUITE ATTACHMENTS\test\") + -join($from[1].Trim(), "`*`"") 
+        $cmd = -join ("xcopy /s/y `"E:\SalesLogixLan\SlxLanDocuments\Mail Merge", $in) + -join ("`" `"E:\NETSUITE ATTACHMENTS\test\") + -join ($from[1].Trim(), "`*`"") 
         $cmd >> $ExecutableFileName
     }
 }

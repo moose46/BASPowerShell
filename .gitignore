@@ -3,3 +3,5 @@ mylog.log
 zipfileScripts/2015-1-17.csv
 filecopy.sh
 filecopy.bat
+/zipfileScripts/
+/PowerShell_BAS.code-workspace
