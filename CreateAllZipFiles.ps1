@@ -7,7 +7,7 @@ Set-Location $POWERSHELL_PATH
 
 if (Test-Path $ERROR_FILENAME) { Remove-Item $ERROR_FILENAME }
 
-
+# Loop through all years and quarters
 for ($year = 2015; $year -lt 2021; $year++) {
     for ($quarter = 1; $quarter -lt 5; $quarter++) {
 
