@@ -49,7 +49,7 @@ if ($ExecutableFileName.Contains('MM')) {
         }
     }
 }
-}
+
 else {
     foreach ($c in $SourceFileNames) {
         $i = $c.Replace('\r', ' ').Replace('\n', '')
