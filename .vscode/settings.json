@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "babblefish",
+            "dialect": "MSSQL",
+            "name": "Babble Fish",
+            "password": "poopface",
+            "port": 1433,
+            "server": "daffy-duck",
+            "username": "bobby"
+        }
+    ]
+}
