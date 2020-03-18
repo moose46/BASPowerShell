@@ -1,15 +1,16 @@
 ﻿Set-Variable -Name POWERSHELL_PATH -Value 'C:\Users\me\Source\Repos\BabbleFishV4\BabbleFishV3\powershell'
 Set-Variable -Name EXPORT_PATH -Value 'C:\Users\me\Source\Repos\BabbleFishV4\BabbleFishV3\crm\data_to_crm\'
 Set-Variable -Name ERROR_FILENAME -Value 'C:\Users\me\Source\Repos\BabbleFishV4\BabbleFishV3\crm\data_to_crm\error.log'
-$PROCESS_ALL_FILES = '.\ProcessAllFiles.ps1'
+Set-Variable -Name PROCESS_ALL_FILES -Value '.\ProcessAllFiles.ps1'
 
+#Change directorys
 Set-Location $POWERSHELL_PATH
 
 if (Test-Path $ERROR_FILENAME) { Remove-Item $ERROR_FILENAME }
 
 # Loop through all years and quarters
-for ($year = 2015; $year -lt 2021; $year++) {
-    for ($quarter = 1; $quarter -lt 5; $quarter++) {
+for ($year = 2015; $year -lt 2016; $year++) {
+    for ($quarter = 1; $quarter -lt 2; $quarter++) {
 
         Write-Host "Processing...." $year $quarter -foreground Green
         Powershell -Command "C:\Users\me\Source\Repos\BabbleFishV4\BabbleFishV3\powershell\CreateCSV_ATTACHMENT_params.ps1 $year $quarter"

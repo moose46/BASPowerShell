@@ -24,7 +24,7 @@ $EXPORT_DATA_FILE_NAME = -join ([string]$EXPORT_PATH, [string]$EXPORT_DATA_FILE_
 
 #sqlcmd -d babblefish --% -S daffY-duck -E  -i "C:\Users\me\Source\Repos\BabbleFishV4\BabbleFishV3\sql_querys\Attachment_Step1_params.sql" -v p_year='1/1/2017'
 
-if (Test-Path $EXPORT_DATA_FILE_NAME) { del $EXPORT_DATA_FILE_NAME }
+if (Test-Path $EXPORT_DATA_FILE_NAME) { Remove-Item $EXPORT_DATA_FILE_NAME }
 
 #### get headers
 Write-Host "Creating Headers ..." -foreground Magenta
