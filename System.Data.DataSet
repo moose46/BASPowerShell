@@ -1,0 +1,90 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="externalid" type="xs:string" minOccurs="0" />
+              <xs:element name="tranId" type="xs:string" minOccurs="0" />
+              <xs:element name="Customer" type="xs:string" minOccurs="0" />
+              <xs:element name="trandate" type="xs:string" minOccurs="0" />
+              <xs:element name="orderstatus" type="xs:string" minOccurs="0" />
+              <xs:element name="startdate" type="xs:string" minOccurs="0" />
+              <xs:element name="enddate" type="xs:string" minOccurs="0" />
+              <xs:element name="otherrefnum" type="xs:string" minOccurs="0" />
+              <xs:element name="memo" type="xs:string" minOccurs="0" />
+              <xs:element name="salesrep" type="xs:string" minOccurs="0" />
+              <xs:element name="opportunity" type="xs:string" minOccurs="0" />
+              <xs:element name="saleseffectivedate" type="xs:string" minOccurs="0" />
+              <xs:element name="leadsource" type="xs:string" minOccurs="0" />
+              <xs:element name="partner" type="xs:string" minOccurs="0" />
+              <xs:element name="Department" type="xs:string" minOccurs="0" />
+              <xs:element name="Class" type="xs:string" minOccurs="0" />
+              <xs:element name="Location" type="xs:string" minOccurs="0" />
+              <xs:element name="couponcode" type="xs:string" minOccurs="0" />
+              <xs:element name="promocode" type="xs:string" minOccurs="0" />
+              <xs:element name="discount-discountItem" type="xs:string" minOccurs="0" />
+              <xs:element name="discount-discountrate" type="xs:string" minOccurs="0" />
+              <xs:element name="itemLine_item" type="xs:string" minOccurs="0" />
+              <xs:element name="itemLine_quantity" type="xs:double" minOccurs="0" />
+              <xs:element name="itemLine_serialNumbers" type="xs:string" minOccurs="0" />
+              <xs:element name="itemLine_units" type="xs:string" minOccurs="0" />
+              <xs:element name="itemLine_salesPrice" type="xs:double" minOccurs="0" />
+              <xs:element name="itemLine_amount" type="xs:double" minOccurs="0" />
+              <xs:element name="itemLine_description" type="xs:string" minOccurs="0" />
+              <xs:element name="itemLine_isTaxable" type="xs:string" minOccurs="0" />
+              <xs:element name="itemLine_priceLevel" type="xs:string" minOccurs="0" />
+              <xs:element name="itemLine_department" type="xs:string" minOccurs="0" />
+              <xs:element name="itemLine_class" type="xs:string" minOccurs="0" />
+              <xs:element name="itemLine_location" type="xs:string" minOccurs="0" />
+              <xs:element name="itemLine_custom_x003A_Field_x0020_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="itemLine_custom_x003A_Field_x0020_Name1" type="xs:string" minOccurs="0" />
+              <xs:element name="itemLine_custom_x003A_Field_x0020_Name2" type="xs:string" minOccurs="0" />
+              <xs:element name="shipdate" type="xs:string" minOccurs="0" />
+              <xs:element name="shipcarrier" type="xs:string" minOccurs="0" />
+              <xs:element name="shipmethod" type="xs:string" minOccurs="0" />
+              <xs:element name="shipcomplete" type="xs:string" minOccurs="0" />
+              <xs:element name="shipaddresslist" type="xs:string" minOccurs="0" />
+              <xs:element name="shipattention" type="xs:string" minOccurs="0" />
+              <xs:element name="shipaddressee" type="xs:string" minOccurs="0" />
+              <xs:element name="shipAddr1" type="xs:string" minOccurs="0" />
+              <xs:element name="shipAddr2" type="xs:string" minOccurs="0" />
+              <xs:element name="shipCity" type="xs:string" minOccurs="0" />
+              <xs:element name="shipState" type="xs:string" minOccurs="0" />
+              <xs:element name="shipZip" type="xs:string" minOccurs="0" />
+              <xs:element name="shipCountry" type="xs:string" minOccurs="0" />
+              <xs:element name="shipPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="terms" type="xs:string" minOccurs="0" />
+              <xs:element name="billattention" type="xs:string" minOccurs="0" />
+              <xs:element name="billAddressee" type="xs:string" minOccurs="0" />
+              <xs:element name="billAddr1" type="xs:string" minOccurs="0" />
+              <xs:element name="billAddr2" type="xs:string" minOccurs="0" />
+              <xs:element name="billCity" type="xs:string" minOccurs="0" />
+              <xs:element name="billState" type="xs:string" minOccurs="0" />
+              <xs:element name="billZip" type="xs:string" minOccurs="0" />
+              <xs:element name="billCountry" type="xs:string" minOccurs="0" />
+              <xs:element name="billPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="currency" type="xs:string" minOccurs="0" />
+              <xs:element name="exchangerate" type="xs:string" minOccurs="0" />
+              <xs:element name="istaxable" type="xs:string" minOccurs="0" />
+              <xs:element name="taxitem" type="xs:string" minOccurs="0" />
+              <xs:element name="taxrate" type="xs:string" minOccurs="0" />
+              <xs:element name="tobeprinted" type="xs:string" minOccurs="0" />
+              <xs:element name="tobeemailed" type="xs:string" minOccurs="0" />
+              <xs:element name="email" type="xs:string" minOccurs="0" />
+              <xs:element name="tobefaxed" type="xs:string" minOccurs="0" />
+              <xs:element name="fax" type="xs:string" minOccurs="0" />
+              <xs:element name="customermessage" type="xs:string" minOccurs="0" />
+              <xs:element name="custbody_nsts_ci_exclude" type="xs:string" minOccurs="0" />
+              <xs:element name="custom_x003A_Field_x0020_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="custom_x003A_Field_x0020_Name1" type="xs:string" minOccurs="0" />
+              <xs:element name="custom_x003A_Field_x0020_Name2" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
